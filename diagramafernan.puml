@@ -1,0 +1,134 @@
+@startuml
+class com.fernan.miumg.edu.gt.ingrediente.Granos {
+- String nombre
+- String tipo
+- int cantidad
++ void setNombre(String)
++ String getTipo()
++ void setTipo(String)
++ void setCantidad(int)
++ String getNombre()
++ int getCantidad()
+}
+
+
+class com.fernan.miumg.edu.gt.ingrediente.Espuma {
+- String nombre
+- int cantidad
++ void setNombre(String)
++ void setCantidad(int)
++ String getNombre()
++ int getCantidad()
+}
+
+
+class com.fernan.miumg.edu.gt.cafe.CafeColombiano {
+- String tipoGrano
++ String getTipoGrano()
++ void setTipoGrano(String)
++ void preparar()
++ void servir()
+}
+
+
+class com.fernan.miumg.edu.gt.sucursal.Equipo {
+- String tipo
+- boolean estado
+- String nombre
++ String getTipo()
++ void setTipo(String)
++ boolean getEstado()
++ void setEstado(Boolean)
++ void encender()
++ void reparar()
++ void apagar()
+}
+
+
+class com.fernan.miumg.edu.gt.ingrediente.Agua {
+- String nombre
+- int cantidad
++ void setNombre(String)
++ void setCantidad(int)
++ String getNombre()
++ int getCantidad()
+}
+
+
+class com.fernan.miumg.edu.gt.sucursal.Empleado {
+- String nombre
+- String puesto
+- int salario
++ void trabajar()
++ void tomarOrden()
++ String getNombre()
++ void setNombre(String)
++ String getPuesto()
++ void setPuesto(String)
++ int getSalario()
++ void setSalario(int)
+}
+
+
+class com.fernan.miumg.edu.gt.sucursal.Sucursal {
+~ List<Empleado> empleados
+~ List<Ingrediente> ingredientes
+~ List<Equipo> equipos
+~ List<String> especialidades
++ Empleado agregarEmpleado(Empleado)
+- Ingrediente agregarIngrediente(Ingrediente)
++ Equipo agregarEquipo(Equipo)
++ String agregarEspecialidad(String)
+}
+
+
+interface com.fernan.miumg.edu.gt.ingrediente.Ingrediente {
++ String getNombre()
++ int getCantidad()
+}
+
+class com.fernan.miumg.edu.gt.cafe.CafeEspressoItaliano {
+- int intensidad
++ void preparar()
++ void servir()
+}
+
+
+abstract class com.fernan.miumg.edu.gt.cafe.Cafe {
+- String nombre
+- int tamano
+- double precio
+~ List<Ingrediente> ingredientes
++ String getNombre()
++ void setNombre(String)
++ int getTamano()
++ void setTamano(int)
++ double getPrecio()
++ void setPrecio(double)
++ {abstract}void preparar()
++ {abstract}void servir()
+}
+
+
+class com.fernan.miumg.edu.gt.ingrediente.Leche {
+- String nombre
+- String tipo
+- int cantidad
++ void setNombre(String)
++ String getTipo()
++ void setTipo(String)
++ void setCantidad(int)
++ String getNombre()
++ int getCantidad()
+}
+
+
+
+
+com.fernan.miumg.edu.gt.ingrediente.Ingrediente <|.. com.fernan.miumg.edu.gt.ingrediente.Granos
+com.fernan.miumg.edu.gt.ingrediente.Ingrediente <|.. com.fernan.miumg.edu.gt.ingrediente.Espuma
+com.fernan.miumg.edu.gt.cafe.Cafe <|-- com.fernan.miumg.edu.gt.cafe.CafeColombiano
+com.fernan.miumg.edu.gt.ingrediente.Ingrediente <|.. com.fernan.miumg.edu.gt.ingrediente.Agua
+com.fernan.miumg.edu.gt.cafe.Cafe <|-- com.fernan.miumg.edu.gt.cafe.CafeEspressoItaliano
+com.fernan.miumg.edu.gt.ingrediente.Ingrediente <|.. com.fernan.miumg.edu.gt.ingrediente.Leche
+@enduml
