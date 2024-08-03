@@ -1,20 +1,20 @@
-package com.cardona.miumg.edu.gt.ingrediente;
+package com.jose.miumg.edu.gt.ingrediente;
 
-public class Agua implements Ingrediente {
-
+public class Angelitos  implements Ingrediente {
     private String nombre;
     private int cantidad;
 
-    public Agua(String nombre, int cantidad) {
-        this.nombre = nombre;
-        this.cantidad = cantidad;
-    }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
     public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    public Angelitos(String nombre, int cantidad) {
+        this.nombre = nombre;
         this.cantidad = cantidad;
     }
 

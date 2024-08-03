@@ -1,7 +1,7 @@
-package com.cardona.miumg.edu.gt.sucursal;
+package com.jose.miumg.edu.gt.sucursal;
 
 
-import com.cardona.miumg.edu.gt.ingrediente.Ingrediente;
+import com.jose.miumg.edu.gt.ingrediente.Ingrediente;
 
 import java.util.ArrayList;
 import java.util.List;

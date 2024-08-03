@@ -1,10 +1,16 @@
-package com.cardona.miumg.edu.gt.ingrediente;
+package com.jose.miumg.edu.gt.ingrediente;
 
-public class Leche  implements Ingrediente {
+public class Granos  implements Ingrediente {
+
     private String nombre;
     private String tipo;
     private int cantidad;
 
+    public Granos(String nombre, String tipo, int cantidad) {
+        this.nombre = nombre;
+        this.tipo = tipo;
+        this.cantidad = cantidad;
+    }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
@@ -12,12 +18,6 @@ public class Leche  implements Ingrediente {
 
     public String getTipo() {
         return tipo;
-    }
-
-    public Leche(String nombre, String tipo, int cantidad) {
-        this.nombre = nombre;
-        this.tipo = tipo;
-        this.cantidad = cantidad;
     }
 
     public void setTipo(String tipo) {
@@ -30,12 +30,11 @@ public class Leche  implements Ingrediente {
 
     @Override
     public String getNombre() {
-        return this.getNombre();
+        return this.nombre;
     }
 
     @Override
     public int getCantidad() {
         return this.getCantidad();
     }
-
 }
