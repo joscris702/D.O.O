@@ -1,5 +1,5 @@
 @startuml
-class com.fernan.miumg.edu.gt.ingrediente.Granos {
+class ingrediente.com.jose.miumg.edu.gt.Granos {
 - String nombre
 - String tipo
 - int cantidad
@@ -22,7 +22,7 @@ class com.fernan.miumg.edu.gt.ingrediente.Espuma {
 }
 
 
-class com.fernan.miumg.edu.gt.cafe.CafeColombiano {
+class cafe.com.jose.miumg.edu.gt.CafeColombiano {
 - String tipoGrano
 + String getTipoGrano()
 + void setTipoGrano(String)
@@ -31,7 +31,7 @@ class com.fernan.miumg.edu.gt.cafe.CafeColombiano {
 }
 
 
-class com.fernan.miumg.edu.gt.sucursal.Equipo {
+class sucursal.com.jose.miumg.edu.gt.Equipo {
 - String tipo
 - boolean estado
 - String nombre
@@ -45,7 +45,7 @@ class com.fernan.miumg.edu.gt.sucursal.Equipo {
 }
 
 
-class com.fernan.miumg.edu.gt.ingrediente.Agua {
+class ingrediente.com.jose.miumg.edu.gt.Agua {
 - String nombre
 - int cantidad
 + void setNombre(String)
@@ -55,7 +55,7 @@ class com.fernan.miumg.edu.gt.ingrediente.Agua {
 }
 
 
-class com.fernan.miumg.edu.gt.sucursal.Empleado {
+class sucursal.com.jose.miumg.edu.gt.Empleado {
 - String nombre
 - String puesto
 - int salario
@@ -70,7 +70,7 @@ class com.fernan.miumg.edu.gt.sucursal.Empleado {
 }
 
 
-class com.fernan.miumg.edu.gt.sucursal.Sucursal {
+class sucursal.com.jose.miumg.edu.gt.Sucursal {
 ~ List<Empleado> empleados
 ~ List<Ingrediente> ingredientes
 ~ List<Equipo> equipos
@@ -82,19 +82,19 @@ class com.fernan.miumg.edu.gt.sucursal.Sucursal {
 }
 
 
-interface com.fernan.miumg.edu.gt.ingrediente.Ingrediente {
+interface ingrediente.com.jose.miumg.edu.gt.Ingrediente {
 + String getNombre()
 + int getCantidad()
 }
 
-class com.fernan.miumg.edu.gt.cafe.CafeEspressoItaliano {
+class cafe.com.jose.miumg.edu.gt.CafeEspressoItaliano {
 - int intensidad
 + void preparar()
 + void servir()
 }
 
 
-abstract class com.fernan.miumg.edu.gt.cafe.Cafe {
+abstract class cafe.com.jose.miumg.edu.gt.Cafe {
 - String nombre
 - int tamano
 - double precio
@@ -110,7 +110,7 @@ abstract class com.fernan.miumg.edu.gt.cafe.Cafe {
 }
 
 
-class com.fernan.miumg.edu.gt.ingrediente.Leche {
+class ingrediente.com.jose.miumg.edu.gt.Leche {
 - String nombre
 - String tipo
 - int cantidad
@@ -125,10 +125,10 @@ class com.fernan.miumg.edu.gt.ingrediente.Leche {
 
 
 
-com.fernan.miumg.edu.gt.ingrediente.Ingrediente <|.. com.fernan.miumg.edu.gt.ingrediente.Granos
-com.fernan.miumg.edu.gt.ingrediente.Ingrediente <|.. com.fernan.miumg.edu.gt.ingrediente.Espuma
-com.fernan.miumg.edu.gt.cafe.Cafe <|-- com.fernan.miumg.edu.gt.cafe.CafeColombiano
-com.fernan.miumg.edu.gt.ingrediente.Ingrediente <|.. com.fernan.miumg.edu.gt.ingrediente.Agua
-com.fernan.miumg.edu.gt.cafe.Cafe <|-- com.fernan.miumg.edu.gt.cafe.CafeEspressoItaliano
-com.fernan.miumg.edu.gt.ingrediente.Ingrediente <|.. com.fernan.miumg.edu.gt.ingrediente.Leche
+ingrediente.com.jose.miumg.edu.gt.Ingrediente <|.. ingrediente.com.jose.miumg.edu.gt.Granos
+ingrediente.com.jose.miumg.edu.gt.Ingrediente <|.. com.fernan.miumg.edu.gt.ingrediente.Espuma
+cafe.com.jose.miumg.edu.gt.Cafe <|-- cafe.com.jose.miumg.edu.gt.CafeColombiano
+ingrediente.com.jose.miumg.edu.gt.Ingrediente <|.. ingrediente.com.jose.miumg.edu.gt.Agua
+cafe.com.jose.miumg.edu.gt.Cafe <|-- cafe.com.jose.miumg.edu.gt.CafeEspressoItaliano
+ingrediente.com.jose.miumg.edu.gt.Ingrediente <|.. ingrediente.com.jose.miumg.edu.gt.Leche
 @enduml

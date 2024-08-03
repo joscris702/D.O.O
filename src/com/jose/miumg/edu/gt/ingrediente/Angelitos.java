@@ -1,4 +1,4 @@
-package com.fernan.miumg.edu.gt.ingrediente;
+package com.jose.miumg.edu.gt.ingrediente;
 
 public class Angelitos  implements Ingrediente {
     private String nombre;

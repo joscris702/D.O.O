@@ -1,4 +1,4 @@
-package com.fernan.miumg.edu.gt.sucursal;
+package com.jose.miumg.edu.gt.sucursal;
 
 public class Equipo {
     private String tipo;
