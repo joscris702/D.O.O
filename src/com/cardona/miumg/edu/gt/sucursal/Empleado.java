@@ -1,4 +1,4 @@
-package com.jose.miumg.edu.gt.sucursal;
+package com.cardona.miumg.edu.gt.sucursal;
 
 public class Empleado {
     private String nombre;

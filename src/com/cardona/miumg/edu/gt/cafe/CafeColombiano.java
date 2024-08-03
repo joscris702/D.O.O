@@ -1,6 +1,6 @@
-package com.jose.miumg.edu.gt.cafe;
+package com.cardona.miumg.edu.gt.cafe;
 
-import com.jose.miumg.edu.gt.ingrediente.Ingrediente;
+import com.cardona.miumg.edu.gt.ingrediente.Ingrediente;
 
 import java.util.List;
 
